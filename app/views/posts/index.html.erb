@@ -1,0 +1,22 @@
+<div class="container my-4">
+  <% @posts.each do |post|%>
+  <div class="card text-center">
+    <div class="card-header text-white" style="background-color: #44413C ;">
+    By  <%= post.user.username %>
+    </div>
+    <div class="card-body">
+      <h3 class="card-title"><%= post.title%></h3>
+      <p class="card-text"><%= post.body.to_plain_text.truncate(200)%></p>
+      <%=link_to ('<i class="fas fa-book-reader"></i> Read More').html_safe, post_path(post), class: "btn btn-success btn-sm"%>
+      <% if post.user == current_user || current_user.try(:admin)%>
+        <%=link_to ('<i class="fas fa-pen"></i> Edit').html_safe , edit_post_path(post), class: "btn btn-primary btn-sm"%>
+        <%=link_to ('<i class="fas fa-trash-alt"></i> Delete').html_safe, post_path(post), method: :delete, data: {confirm: "Are you sure?"}, class: "btn btn-danger btn-sm"%>
+      <% end %>
+
+    </div>
+    <div class="card-footer text-muted">
+      |<%= post.created_at.strftime("%B %e, %Y") unless post.created_at.nil?%> | <%= post.views%> views |
+    </div>
+  </div><br><br><br>
+  <% end %>
+</div>

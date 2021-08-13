@@ -1,0 +1,69 @@
+<div id="carouselExampleControls" class="carousel slide carousel-fade" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active" data-interval="5000">
+      <%= image_tag "blog1.jpg", :class=>"d-block w-100" %>
+    </div>
+    <div class="carousel-item">
+      <%= image_tag "blog2.jpg", :class=>"d-block w-100" %>
+    </div>
+    <div class="carousel-item">
+      <%= image_tag "blog4.jpg", :class=>"d-block w-100" %>
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+
+<div class="container my-4">
+  <div class="row featurette d-flex justify-content-center align-items-center my-4">
+    <div class="col-md-7">
+      <h2 class="featurette-heading">Introduction
+        <span class="text-muted"></span></h2>
+      <p class="lead">Share your idea and skills to the people who want to learn more. You can also view others ideas and it will be easy for you to learn different things.
+      </div>
+      <div class="col-md-5">
+        <%= image_tag "blog5.jpg", :class=>"bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" %>
+      </div>
+    </div>
+
+    <div class="row featurette d-flex justify-content-center align-items-center my-4">
+      <div class="col-md-7 order-md-2">
+        <h2 class="featurette-heading">Features<span class="text-muted"></span></h2>
+        <p class="lead">
+          Responsive in all mobile phones. You can edit your texts in different forms.
+        </p>
+      </div>
+      <div class="col-md-5 order-md-1 my-2">
+        <%= image_tag "blog6.jpg", :class=>"bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" %>
+      </div>
+    </div>
+
+    <div class="row featurette d-flex justify-content-center align-items-center my-4">
+      <div class="col-md-7">
+        <h2 class="featurette-heading">Helping Community<span class="text-muted"></span></h2>
+        <p class="lead">
+          Comment if you have any doubt. The author or any other person will help you out as soon as possible.
+        </p>
+      </div>
+      <div class="col-md-5">
+        <%= image_tag "blog7.jpg", :class=>"bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" %>
+      </div>
+    </div>
+
+  </div>
+
+  <style>
+    .tales {
+      width: 100%;
+    }
+    .carousel-inner {
+      width: 100%;
+      max-height: 700px !important;
+    }
+  </style>

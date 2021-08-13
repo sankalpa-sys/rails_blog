@@ -1,0 +1,8 @@
+<h1>Add comment</h1>
+<br><div class="form-group">
+  <%= simple_form_for ([@post, @post.comments.build]) do |f|%>
+    <%= f.text_area :comment, placeholder: "Say something...", class: "form-control", rows:5, cols:5, :required => true %><br>
+    <%=f.submit "Comment",  class:"btn btn-success btn-sm"%>
+
+  <% end %>
+</div>

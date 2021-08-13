@@ -1,0 +1,14 @@
+<div class="container my-4">
+  <h1>Edit Blog</h1>
+
+  <%= render 'form', post: @post %>
+
+  <%= link_to 'Show', @post %> |
+  <%= link_to 'Back', posts_path %>
+
+</div>
+<style>
+  h1{
+    font-family: Arial, sans-serif;
+  }
+</style>
