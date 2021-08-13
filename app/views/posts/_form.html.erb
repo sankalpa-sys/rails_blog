@@ -13,3 +13,11 @@
   <%= f.submit class: "btn btn-success btn-sm" %>
   <% end %>
 </div>
+
+
+<script>
+  window.addEventListener("trix-file-accept", function(event) {
+    event.preventDefault()
+    alert("You cannot upload files")
+  })
+</script>

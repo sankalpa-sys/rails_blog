@@ -7,7 +7,7 @@
     <div class="container">
 
       <h2>
-        <p class="ubuntu"><%= @post.title%></p>
+        <h3 class=ubuntu><u><%= @post.title.capitalize%></u></h3>
       </h2>
       <div class="body-text">
 
@@ -28,6 +28,16 @@
     </div>
 
   </div>
+  <nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <% if @post.user == current_user || current_user.try(:admin)%>
+    <li class="breadcrumb-item"><a href="<%= edit_post_path(@post)%>">Edit</a></li>
+    <% end%>
+    <li class="breadcrumb-item"><a href="/">Back</a></li>
+  </ol>
+</nav>
+  <hr>
+
   <%= render 'comments/form'%><br>
   <%= render 'comments/comment'%>
 
