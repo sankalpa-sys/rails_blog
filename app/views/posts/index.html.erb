@@ -6,7 +6,7 @@
     </div>
     <div class="card-body">
       <h3 class="card-title"><%= post.title.capitalize%></h3>
-      <p class="card-text"><%= post.body.to_plain_text.truncate(200)%></p>
+      <p class="card-text"><%= post.body.to_plain_text.truncate(300)%></p>
       <%=link_to ('<i class="fas fa-book-reader"></i> Read More').html_safe, post_path(post), class: "btn btn-success btn-sm"%>
       <% if post.user == current_user || current_user.try(:admin)%>
         <%=link_to ('<i class="fas fa-pen"></i> Edit').html_safe , edit_post_path(post), class: "btn btn-primary btn-sm"%>

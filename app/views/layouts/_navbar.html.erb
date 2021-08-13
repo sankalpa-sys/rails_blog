@@ -12,6 +12,11 @@
         <li class="nav-item <%= 'active' if current_page?(pages_about_path) %>">
           <%= link_to "About", pages_about_path, class:"nav-link"%>
         </li>
+        <% unless current_user%>
+        <li class="nav-item <%= 'active' if current_page?(new_post_path) %>">
+          <a class="nav-link" aria-current="page" href="<%= new_post_path %>">Get Started</a>
+        </li>
+        <% end %>
       </ul>
         <ul class="navbar-nav ml-auto">
           <% if current_user %>
