@@ -1,4 +1,3 @@
-
 <div class="container">
   <%= form_with(model: post) do |f| %>
 
@@ -11,13 +10,34 @@
     <%= f.rich_text_area :body, class: "form-control" %>
   </div><br>
   <%= f.submit class: "btn btn-success btn-sm" %>
-  <% end %>
+<% end %>
+
+</div><br>
+
+<div class="container">
+  <a class="btn btn-danger btn-sm float-right" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
+  Read First
+  </a>
+
+  <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title" id="offcanvasExampleLabel">Keep in Mind!!</h5>
+    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body">
+    <div>
+      <ol>
+        <li>The body of your blog must have at least 250 words. Less than 250 words will not be accepted.</li><hr>
+        <li>The title of your blog must have at most 50 letters. That means you cannot have more than 50 letters in your title.</li>
+      </ol>
+    </div>
+  </div>
+  </div>
 </div>
 
-
 <script>
-  window.addEventListener("trix-file-accept", function(event) {
-    event.preventDefault()
-    alert("You cannot upload files")
-  })
+window.addEventListener("trix-file-accept", function (event) {
+  event.preventDefault()
+  alert("You cannot upload files")
+})
 </script>
