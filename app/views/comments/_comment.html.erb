@@ -30,7 +30,7 @@
                     <%= comment.comment%>
                   </div>
                   <div class="action">
-                    <% if comment.user == current_user || current_user.admin || current_user == @post.user%>
+                    <% if comment.user == current_user || current_user.try(:admin?) || current_user == @post.user%>
                       <%= link_to "Delete", [comment.post, comment], method: :delete, class: "badge rounded-pill bg-danger", data: {confirm: 'Are you sure ?'}%>
                     <% end %>
                   </div>
